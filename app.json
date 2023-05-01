@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "TeslaApp",
+    "slug": "tesla-app",
+    "android": {
+      "package": "com.anonymous.TeslaApp"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "99edce3d-02d3-4634-84bf-1ecb0d9942fd"
+      }
+    },
+    "owner": "gulraizzz"
+  }
+}
