@@ -2,9 +2,12 @@ import { StyleSheet, Text, View, Image, StatusBar, Pressable } from "react-nativ
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import climate from "../assets/images/climate.png";
 import { useRouter } from "expo-router";
+import { useState } from "react";
 
 const ClimateScreen = () => {
     const router = useRouter();
+    const [temparature, setTemparature] = useState(70);
+
     return (
         <View style={styles.container}>
             <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
@@ -22,9 +25,19 @@ const ClimateScreen = () => {
                         <Text style={styles.iconText}>On</Text>
                     </View>
                     <View style={styles.temparatureContainer}>
-                        <MaterialIcons name="chevron-left" color="#505050" size={25} />
-                        <Text style={styles.temparatureText}>68°</Text>
-                        <MaterialIcons name="chevron-right" color="#505050" size={25} />
+                        <MaterialIcons
+                            onPress={() => setTemparature(temparature - 1)}
+                            name="chevron-left"
+                            color="#505050"
+                            size={25}
+                        />
+                        <Text style={styles.temparatureText}>{temparature}°</Text>
+                        <MaterialIcons
+                            onPress={() => setTemparature(temparature + 1)}
+                            name="chevron-right"
+                            color="#505050"
+                            size={25}
+                        />
                     </View>
                     <View style={styles.iconContainer}>
                         <MaterialCommunityIcons name="car-door" color="white" size={38} />
