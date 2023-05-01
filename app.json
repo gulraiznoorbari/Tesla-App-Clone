@@ -6,6 +6,7 @@
         },
         "name": "TeslaApp",
         "slug": "tesla-app",
+        "orientation": "portrait",
         "extra": {
             "eas": {
                 "projectId": "99edce3d-02d3-4634-84bf-1ecb0d9942fd"
