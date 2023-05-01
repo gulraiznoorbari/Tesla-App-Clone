@@ -7,6 +7,7 @@ import { useState } from "react";
 const ClimateScreen = () => {
     const router = useRouter();
     const [temparature, setTemparature] = useState(70);
+    const [on, setOn] = useState(true);
 
     return (
         <View style={styles.container}>
@@ -20,10 +21,10 @@ const ClimateScreen = () => {
             <View style={styles.footer}>
                 <Text style={styles.temparatureStats}>Interior 74°F - Exterior 66°F</Text>
                 <View style={styles.controls}>
-                    <View style={styles.iconContainer}>
+                    <Pressable style={styles.iconContainer} onPress={() => setOn(!on)}>
                         <MaterialCommunityIcons name="power" color="white" size={38} />
-                        <Text style={styles.iconText}>On</Text>
-                    </View>
+                        <Text style={styles.iconText}>{on ? "On" : "Off"}</Text>
+                    </Pressable>
                     <View style={styles.temparatureContainer}>
                         <MaterialIcons
                             onPress={() => setTemparature(temparature - 1)}
