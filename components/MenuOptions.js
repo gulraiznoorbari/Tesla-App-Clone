@@ -6,7 +6,11 @@ const MenuOptions = ({ item }) => {
     return (
         <Link href={item.href} asChild>
             <Pressable style={styles.optionRow}>
-                <MaterialCommunityIcons name={item.iconName} size={27} color="gray" />
+                {item.icon ? (
+                    <item.icon />
+                ) : (
+                    <MaterialCommunityIcons name={item.iconName} size={27} color="gray" />
+                )}
                 <Text style={styles.optionText}>{item.name}</Text>
                 <MaterialIcons
                     name="keyboard-arrow-right"

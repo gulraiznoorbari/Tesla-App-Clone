@@ -1,3 +1,5 @@
+import { FontAwesome5 } from "@expo/vector-icons";
+
 export default [
     {
         name: "Controls",
@@ -26,7 +28,7 @@ export default [
     },
     {
         name: "Power Stats",
-        iconName: "bolt",
+        icon: () => <FontAwesome5 name="bolt" size={27} color="gray" />,
         href: "/PowerStats",
     },
 ];
