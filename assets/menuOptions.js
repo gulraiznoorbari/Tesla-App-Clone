@@ -15,11 +15,6 @@ export default [
         href: "/Location",
     },
     {
-        name: "Summon",
-        iconName: "ship-wheel",
-        href: "/Summon",
-    },
-    {
         name: "Security",
         iconName: "shield-check",
         href: "/Security",
@@ -30,8 +25,8 @@ export default [
         href: "/Updates",
     },
     {
-        name: "Pet mode",
-        iconName: "dog",
-        href: "/PetMode",
+        name: "Power Stats",
+        iconName: "bolt",
+        href: "/PowerStats",
     },
 ];
