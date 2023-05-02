@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, StatusBar, Pressable } from "react-native";
+import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import climate from "../assets/images/climate.png";
 import { useRouter } from "expo-router";
@@ -11,7 +11,6 @@ const ClimateScreen = () => {
 
     return (
         <View style={styles.container}>
-            <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
             <Image source={climate} style={styles.carImage} resizeMode="cover" />
 
             <Pressable onPress={() => router.back()} style={styles.backButton}>

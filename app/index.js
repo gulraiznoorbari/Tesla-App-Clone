@@ -1,38 +1,6 @@
-import { StyleSheet, Image, View, StatusBar, FlatList } from "react-native";
-import car from "../assets/images/car.png";
-import menuOptions from "../assets/menuOptions";
-import MenuOptions from "../components/MenuOptions";
-import Controls from "../components/Controls";
-import TopBar from "../components/TopBar";
+import { Redirect } from "expo-router";
 
 export default function Page() {
-    return (
-        <View style={styles.container}>
-            <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
-            <TopBar />
-            <Image source={car} alt="Your Car Image" style={styles.carImage} resizeMode="contain" />
-            {/* <Controls /> */}
-            <FlatList
-                data={menuOptions}
-                renderItem={MenuOptions}
-                showsVerticalScrollIndicator={false}
-                ListHeaderComponent={Controls} // scrolls the component with the FlatList items.
-                ItemSeparatorComponent={() => (
-                    <View style={{ height: 0.5, backgroundColor: "#202020" }}></View>
-                )}
-            />
-        </View>
-    );
+    // You can also call the Home component directly :p
+    return <Redirect href="/Home" />;
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        padding: 25,
-        backgroundColor: "#161818",
-    },
-    carImage: {
-        width: "100%",
-        height: 280,
-    },
-});

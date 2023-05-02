@@ -5,7 +5,7 @@ const Layout = () => {
     return (
         <>
             <StatusBar style="inverted" animated={true} />
-            <Stack screenOptions={{ headerShown: false }} />
+            <Stack initialRouteName="Home" screenOptions={{ headerShown: false }} />
         </>
     );
 };
