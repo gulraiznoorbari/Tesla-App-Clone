@@ -1,4 +1,5 @@
-import { StyleSheet, Image, View, FlatList } from "react-native";
+import { StyleSheet, Image, SafeAreaView, View, FlatList } from "react-native";
+
 import car from "../assets/images/car.png";
 import menuOptions from "../assets/menuOptions";
 import MenuOptions from "../components/MenuOptions";
@@ -7,7 +8,7 @@ import TopBar from "../components/TopBar";
 
 const HomeScreen = () => {
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <TopBar />
             <Image source={car} alt="Your Car Image" style={styles.carImage} resizeMode="contain" />
             {/* <Controls /> */}
@@ -20,7 +21,7 @@ const HomeScreen = () => {
                     <View style={{ height: 0.5, backgroundColor: "#202020" }}></View>
                 )}
             />
-        </View>
+        </SafeAreaView>
     );
 };
 

@@ -1,8 +1,9 @@
-import { StyleSheet, Text, View, Image, Pressable } from "react-native";
+import { StyleSheet, Text, View, Image, Pressable, SafeAreaView } from "react-native";
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
-import climate from "../assets/images/climate.png";
 import { useRouter } from "expo-router";
 import { useState } from "react";
+
+import climate from "../assets/images/climate.png";
 
 const ClimateScreen = () => {
     const router = useRouter();
@@ -10,7 +11,7 @@ const ClimateScreen = () => {
     const [on, setOn] = useState(true);
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <Image source={climate} style={styles.carImage} resizeMode="cover" />
 
             <Pressable onPress={() => router.back()} style={styles.backButton}>
@@ -45,7 +46,7 @@ const ClimateScreen = () => {
                     </View>
                 </View>
             </View>
-        </View>
+        </SafeAreaView>
     );
 };
 

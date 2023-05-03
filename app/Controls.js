@@ -1,13 +1,14 @@
-import { StyleSheet, Text, View, Pressable, Image } from "react-native";
-import { useRouter } from "expo-router";
+import { StyleSheet, Text, View, Pressable, Image, SafeAreaView } from "react-native";
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
+
 import tesla from "../assets/images/tesla.png";
 
 const ControlScreen = () => {
     const router = useRouter();
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <View style={styles.header}>
                 <Pressable onPress={() => router.back()} style={styles.backButton}>
                     <MaterialCommunityIcons name="chevron-left" color="white" size={24} />
@@ -38,7 +39,7 @@ const ControlScreen = () => {
                     <Text style={styles.menuItemText}>Vent</Text>
                 </View>
             </View>
-        </View>
+        </SafeAreaView>
     );
 };
 

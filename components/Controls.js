@@ -1,6 +1,5 @@
 import { StyleSheet, View } from "react-native";
 import { Entypo, Ionicons, FontAwesome5, MaterialCommunityIcons } from "@expo/vector-icons";
-import React from "react";
 
 const Controls = () => {
     return (

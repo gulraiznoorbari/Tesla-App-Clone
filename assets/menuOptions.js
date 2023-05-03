@@ -28,7 +28,7 @@ export default [
     },
     {
         name: "Power Stats",
-        icon: () => <FontAwesome5 name="bolt" size={27} color="gray" />,
+        icon: () => <FontAwesome5 name="bolt" size={22} color="gray" />,
         href: "/PowerStats",
     },
 ];

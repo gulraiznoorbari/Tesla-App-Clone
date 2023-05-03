@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
-import React from "react";
 
 const TopBar = () => {
     return (
@@ -13,7 +12,7 @@ const TopBar = () => {
                 </View>
                 <Text style={styles.status}>Parked</Text>
             </View>
-            <FontAwesome name="user-circle" size={30} color="gray" />
+            <FontAwesome name="user-circle-o" size={30} color="gray" />
         </View>
     );
 };
