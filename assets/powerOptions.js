@@ -4,7 +4,7 @@ export default [
     {
         name: "Energy",
         icon: () => <FontAwesome name="pie-chart" color="darkgray" size={22} />,
-        href: "/",
+        href: "/EnergyConsumption",
     },
     {
         name: "Impact",
